@@ -1,0 +1,15 @@
+<h1><%= @artist.name%></h1>
+<p>Age: <%= @artist.age%></p>
+<p>Title: <%= @artist.title%></p>
+
+
+<% if @artist.instruments%>
+    <% @artist.instruments.each do |instrument|%>
+        <p><%=link_to instrument.name, instrument%></p>
+    <%end%>
+<%end%>
+
+<%= link_to "Index", artists_path%>
+
+
+
